@@ -79,7 +79,7 @@
         - [6.3.1. 订阅接收通知](section-6/6.3.1.md)
     - [6.4. 接收事件通知](section-6/6.4.md)
 - [7. 错误报告](section-7/README.md)
-    - [7.1. Error Response Message](section-7/7.1.md)
+    - [7.1. 错误响应消息](section-7/7.1.md)
 - [8. RESTCONF模块](section-8/README.md)
 - [9. RESTCONF Monitoring](section-9/README.md)
     - [9.1. restconf-state/capabilities]()
