@@ -1,0 +1,2125 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.4. 接收事件通知 · YANG 1.1 数据建模语言</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../section-7/" />
+    
+    
+    <link rel="prev" href="6.3.1.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"tonydeng/rfc7950-zh","types":["star","watch","fork"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于RFC8040中文翻译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../section-1/">
+            
+                <a href="../section-1/">
+            
+                    
+                    1. 介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../section-1/1.1.html">
+            
+                <a href="../section-1/1.1.html">
+            
+                    
+                    1.1. 术语
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../section-1/1.1.1.html">
+            
+                <a href="../section-1/1.1.1.html">
+            
+                    
+                    1.1.1. NETCONF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../section-1/1.1.2.html">
+            
+                <a href="../section-1/1.1.2.html">
+            
+                    
+                    1.1.2. HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../section-1/1.1.3.html">
+            
+                <a href="../section-1/1.1.3.html">
+            
+                    
+                    1.1.3. YANG
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../section-1/1.1.4.html">
+            
+                <a href="../section-1/1.1.4.html">
+            
+                    
+                    1.1.4. NETCONF通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../section-1/1.1.5.html">
+            
+                <a href="../section-1/1.1.5.html">
+            
+                    
+                    1.1.5. 条款
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../section-1/1.1.6.html">
+            
+                <a href="../section-1/1.1.6.html">
+            
+                    
+                    1.1.6. URI模板和示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../section-1/1.1.7.html">
+            
+                <a href="../section-1/1.1.7.html">
+            
+                    
+                    1.1.7. 树图(Tree Diagrams)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../section-1/1.2.html">
+            
+                <a href="../section-1/1.2.html">
+            
+                    
+                    1.2. NETCONF功能的子集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../section-1/1.3.html">
+            
+                <a href="../section-1/1.3.html">
+            
+                    
+                    1.3. 数据模型驱动的API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../section-1/1.4.html">
+            
+                <a href="../section-1/1.4.html">
+            
+                    
+                    1.4. 与NETCONF共存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../section-1/1.5.html">
+            
+                <a href="../section-1/1.5.html">
+            
+                    
+                    1.5. RESTCONF可扩展性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../section-2/">
+            
+                <a href="../section-2/">
+            
+                    
+                    2. 传输协议
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../section-2/2.1.html">
+            
+                <a href="../section-2/2.1.html">
+            
+                    
+                    2.1. 诚信和保密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../section-2/2.2.html">
+            
+                <a href="../section-2/2.2.html">
+            
+                    
+                    2.2. HTTPS与X.509v3证书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../section-2/2.3.html">
+            
+                <a href="../section-2/2.3.html">
+            
+                    
+                    2.3. 证书验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../section-2/2.4.html">
+            
+                <a href="../section-2/2.4.html">
+            
+                    
+                    2.4. 经过身份验证的服务器标识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../section-2/2.5.html">
+            
+                <a href="../section-2/2.5.html">
+            
+                    
+                    2.5. 身份验证的客户端身份
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../section-3/">
+            
+                <a href="../section-3/">
+            
+                    
+                    3. 资源
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../section-3/3.1.html">
+            
+                <a href="../section-3/3.1.html">
+            
+                    
+                    3.1. 根资源发现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../section-3/3.2.html">
+            
+                <a href="../section-3/3.2.html">
+            
+                    
+                    3.2. RESTCONF媒体类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../section-3/3.3.html">
+            
+                <a href="../section-3/3.3.html">
+            
+                    
+                    3.3. API资源
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../section-3/3.3.1.html">
+            
+                <a href="../section-3/3.3.1.html">
+            
+                    
+                    3.3.1. {+restconf}/data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../section-3/3.3.2.html">
+            
+                <a href="../section-3/3.3.2.html">
+            
+                    
+                    3.3.2. {+restconf}/operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../section-3/3.3.3.html">
+            
+                <a href="../section-3/3.3.3.html">
+            
+                    
+                    3.3.3. {+restconf}/yang-library-version
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../section-3/3.4.html">
+            
+                <a href="../section-3/3.4.html">
+            
+                    
+                    3.4. 数据存储资源
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../section-3/3.4.1.html">
+            
+                <a href="../section-3/3.4.1.html">
+            
+                    
+                    3.4.1. 编辑冲突预防
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../section-3/3.5.html">
+            
+                <a href="../section-3/3.5.html">
+            
+                    
+                    3.5. 数据资源
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../section-3/3.5.1.html">
+            
+                <a href="../section-3/3.5.1.html">
+            
+                    
+                    3.5.1. 时间戳
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../section-3/3.5.2.html">
+            
+                <a href="../section-3/3.5.2.html">
+            
+                    
+                    3.5.2. 实体标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../section-3/3.5.3.html">
+            
+                <a href="../section-3/3.5.3.html">
+            
+                    
+                    3.5.3. 在请求URI中编码数据资源标识符
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.3.1" data-path="../section-3/3.5.3.1.html">
+            
+                <a href="../section-3/3.5.3.1.html">
+            
+                    
+                    3.5.3.1. ABNF数据资源标识符
+
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../section-3/3.5.4.html">
+            
+                <a href="../section-3/3.5.4.html">
+            
+                    
+                    3.5.4. 默认处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../section-3/3.6.html">
+            
+                <a href="../section-3/3.6.html">
+            
+                    
+                    3.6. 操作资源
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../section-3/3.6.1.html">
+            
+                <a href="../section-3/3.6.1.html">
+            
+                    
+                    3.6.1. 编码操作资源输入参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="../section-3/3.6.2.html">
+            
+                <a href="../section-3/3.6.2.html">
+            
+                    
+                    3.6.2. 编码操作资源输出参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="../section-3/3.6.3.html">
+            
+                <a href="../section-3/3.6.3.html">
+            
+                    
+                    3.6.3. 编码操作资源错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../section-3/3.7.html">
+            
+                <a href="../section-3/3.7.html">
+            
+                    
+                    3.7. 模式资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../section-3/3.8.html">
+            
+                <a href="../section-3/3.8.html">
+            
+                    
+                    3.8. 事件流资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../section-3/3.9.html">
+            
+                <a href="../section-3/3.9.html">
+            
+                    
+                    3.9. “errors”的YANG数据模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../section-4/">
+            
+                <a href="../section-4/">
+            
+                    
+                    4. RESTCONF方法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../section-4/4.1.html">
+            
+                <a href="../section-4/4.1.html">
+            
+                    
+                    4.1. OPTIONS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../section-4/4.2.html">
+            
+                <a href="../section-4/4.2.html">
+            
+                    
+                    4.2. HEAD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../section-4/4.3.html">
+            
+                <a href="../section-4/4.3.html">
+            
+                    
+                    4.3. GET
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../section-4/4.4.html">
+            
+                <a href="../section-4/4.4.html">
+            
+                    
+                    4.4. POST
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="../section-4/4.4.1.html">
+            
+                <a href="../section-4/4.4.1.html">
+            
+                    
+                    4.4.1. 创建资源模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.2" data-path="../section-4/4.4.2.html">
+            
+                <a href="../section-4/4.4.2.html">
+            
+                    
+                    4.4.2. 调用操作模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../section-4/4.5.html">
+            
+                <a href="../section-4/4.5.html">
+            
+                    
+                    4.5. PUT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../section-4/4.6.html">
+            
+                <a href="../section-4/4.6.html">
+            
+                    
+                    4.6. PATCH
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.6.1" data-path="../section-4/4.6.1.html">
+            
+                <a href="../section-4/4.6.1.html">
+            
+                    
+                    4.6.1. Plain Patch
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../section-4/4.7.html">
+            
+                <a href="../section-4/4.7.html">
+            
+                    
+                    4.7. DELETE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../section-4/4.8.html">
+            
+                <a href="../section-4/4.8.html">
+            
+                    
+                    4.8. 查询参数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.8.1" data-path="../section-4/4.8.1.html">
+            
+                <a href="../section-4/4.8.1.html">
+            
+                    
+                    4.8.1. “content”查询参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.2" data-path="../section-4/4.8.2.html">
+            
+                <a href="../section-4/4.8.2.html">
+            
+                    
+                    4.8.2. “depth”查询参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.3" data-path="../section-4/4.8.3.html">
+            
+                <a href="../section-4/4.8.3.html">
+            
+                    
+                    4.8.3. “fields”查询参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.4" data-path="../section-4/4.8.4.html">
+            
+                <a href="../section-4/4.8.4.html">
+            
+                    
+                    4.8.4. “filter”查询参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.5" data-path="../section-4/4.8.5.html">
+            
+                <a href="../section-4/4.8.5.html">
+            
+                    
+                    4.8.5. “insert”查询参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.6" data-path="../section-4/4.8.6.html">
+            
+                <a href="../section-4/4.8.6.html">
+            
+                    
+                    4.8.6. “point”查询参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.7" data-path="../section-4/4.8.7.html">
+            
+                <a href="../section-4/4.8.7.html">
+            
+                    
+                    4.8.7. “start-time”查询参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.8" data-path="../section-4/4.8.8.html">
+            
+                <a href="../section-4/4.8.8.html">
+            
+                    
+                    4.8.8. “stop-time”查询参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.9" data-path="../section-4/4.8.9.html">
+            
+                <a href="../section-4/4.8.9.html">
+            
+                    
+                    4.8.9. “with-defaults”查询参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../section-5/">
+            
+                <a href="../section-5/">
+            
+                    
+                    5. 消息
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../section-5/5.1.html">
+            
+                <a href="../section-5/5.1.html">
+            
+                    
+                    5.1. 请求URI结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../section-5/5.2.html">
+            
+                <a href="../section-5/5.2.html">
+            
+                    
+                    5.2. 消息编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../section-5/5.3.html">
+            
+                <a href="../section-5/5.3.html">
+            
+                    
+                    5.3. RESTCONF元数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../section-5/5.3.1.html">
+            
+                <a href="../section-5/5.3.1.html">
+            
+                    
+                    5.3.1. XML元数据编码示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../section-5/5.3.2.html">
+            
+                <a href="../section-5/5.3.2.html">
+            
+                    
+                    5.3.2. JSON元数据编码示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../section-5/5.4.html">
+            
+                <a href="../section-5/5.4.html">
+            
+                    
+                    5.4. 返回状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../section-5/5.5.html">
+            
+                <a href="../section-5/5.5.html">
+            
+                    
+                    5.5. 消息缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    6. 通知
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="6.1.html">
+            
+                <a href="6.1.html">
+            
+                    
+                    6.1. 服务器支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    6.2. 事件流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    6.3. Subscribing to Receive Notifications
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.3.1" data-path="6.3.1.html">
+            
+                <a href="6.3.1.html">
+            
+                    
+                    6.3.1. 订阅接收通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.4" data-path="6.4.html">
+            
+                <a href="6.4.html">
+            
+                    
+                    6.4. 接收事件通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../section-7/">
+            
+                <a href="../section-7/">
+            
+                    
+                    7. 错误报告
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../section-7/7.1.html">
+            
+                <a href="../section-7/7.1.html">
+            
+                    
+                    7.1. 错误响应消息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../section-8/">
+            
+                <a href="../section-8/">
+            
+                    
+                    8. RESTCONF模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../section-9/">
+            
+                <a href="../section-9/">
+            
+                    
+                    9. RESTCONF监测
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../section-9/9.1.html">
+            
+                <a href="../section-9/9.1.html">
+            
+                    
+                    9.1. restconf-state/capabilities
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../section-9/9.1.1.html">
+            
+                <a href="../section-9/9.1.1.html">
+            
+                    
+                    9.1.1. 查询参数URIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="../section-9/9.1.2.html">
+            
+                <a href="../section-9/9.1.2.html">
+            
+                    
+                    9.1.2. “defaults”协议能力URI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../section-9/9.2.html">
+            
+                <a href="../section-9/9.2.html">
+            
+                    
+                    9.2. restconf-state/streams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../section-9/9.3.html">
+            
+                <a href="../section-9/9.3.html">
+            
+                    
+                    9.3. RESTCONF监控模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    10. YANG Module Library
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" >
+            
+                <span>
+            
+                    
+                    10.1. modules-state/module
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    11. IANA Considerations
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" >
+            
+                <span>
+            
+                    
+                    11.1. The "restconf" Relation Type
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" >
+            
+                <span>
+            
+                    
+                    11.2. Registrations for New URIs and YANG Modules
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" >
+            
+                <span>
+            
+                    
+                    11.3. Media Types
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.3.1" >
+            
+                <span>
+            
+                    
+                    11.3.1. Media Type "application/yang-data+xml"
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.2" >
+            
+                <span>
+            
+                    
+                    11.3.2. Media Type "application/yang-data+json"
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.3" >
+            
+                <span>
+            
+                    
+                    11.4. RESTCONF Capability URNs
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.4" >
+            
+                <span>
+            
+                    
+                    11.5. Registration of "restconf" URN Sub-namespace
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    12. Security Considerations
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                    13. References
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" >
+            
+                <span>
+            
+                    
+                    13.1. Normative References
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" >
+            
+                <span>
+            
+                    
+                    13.2. Informative References
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                    Appendix A. Example YANG Module
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" >
+            
+                <span>
+            
+                    
+                    A.1. "example-jukebox" YANG Module
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" >
+            
+                <span>
+            
+                    
+                    Appendix B. RESTCONF Message Examples
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" >
+            
+                <span>
+            
+                    
+                    B.1. Resource Retrieval Examples
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1.1" >
+            
+                <span>
+            
+                    
+                    B.1.1. Retrieve the Top-Level API Resource
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.1.2" >
+            
+                <span>
+            
+                    
+                    B.1.2. Retrieve the Server Module Information
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.1.3" >
+            
+                <span>
+            
+                    
+                    B.1.3. Retrieve the Server Capability Information
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" >
+            
+                <span>
+            
+                    
+                    B.2. Data Resource and Datastore Resource Examples
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.2.1" >
+            
+                <span>
+            
+                    
+                    B.2.1. Create New Data Resources
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2.2" >
+            
+                <span>
+            
+                    
+                    B.2.2. Detect Datastore Resource Entity-Tag Change
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2.3" >
+            
+                <span>
+            
+                    
+                    B.2.3. Edit a Datastore Resource
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2.4" >
+            
+                <span>
+            
+                    
+                    B.2.4. Replace a Datastore Resource
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2.5" >
+            
+                <span>
+            
+                    
+                    B.2.5. Edit a Data Resource
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" >
+            
+                <span>
+            
+                    
+                    B.3. Query Parameter Examples
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.3.1" >
+            
+                <span>
+            
+                    
+                    B.3.1. "content" Parameter
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.2" >
+            
+                <span>
+            
+                    
+                    B.3.2. "depth" Parameter
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.3" >
+            
+                <span>
+            
+                    
+                    B.3.3. "fields" Parameter
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.4" >
+            
+                <span>
+            
+                    
+                    B.3.4. "insert" Parameter
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.5" >
+            
+                <span>
+            
+                    
+                    B.3.5. "point" Parameter
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.6" >
+            
+                <span>
+            
+                    
+                    B.3.6. "filter" Parameter
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.7" >
+            
+                <span>
+            
+                    
+                    B.3.7. "start-time" Parameter
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.8" >
+            
+                <span>
+            
+                    
+                    B.3.8. "stop-time" Parameter
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.9" >
+            
+                <span>
+            
+                    
+                    B.3.9. "with-defaults" Parameter
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" >
+            
+                <span>
+            
+                    
+                    Acknowledgements
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" >
+            
+                <span>
+            
+                    
+                    Authors' Addresses
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6.4. 接收事件通知</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="64-&#x63A5;&#x6536;&#x4E8B;&#x4EF6;&#x901A;&#x77E5;"><a name="64-&#x63A5;&#x6536;&#x4E8B;&#x4EF6;&#x901A;&#x77E5;" class="plugin-anchor" href="#64-&#x63A5;&#x6536;&#x4E8B;&#x4EF6;&#x901A;&#x77E5;"><i class="fa fa-link" aria-hidden="true"></i></a>6.4. &#x63A5;&#x6536;&#x4E8B;&#x4EF6;&#x901A;&#x77E5;</h1>
+<p><code>RESTCONF</code>&#x901A;&#x77E5;&#x6839;&#x636E;&#x4E8B;&#x4EF6;&#x6D41;&#x7684;&#x5B9A;&#x4E49;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x3002;</p>
+<p>&#x4E8B;&#x4EF6;&#x6570;&#x636E;&#x7684;&#x7ED3;&#x6784;&#x57FA;&#x4E8E;[<a href="https://tools.ietf.org/html/rfc5277" target="_blank">RFC5277</a>]&#x7684;<a href="https://tools.ietf.org/html/rfc5277#section-4" target="_blank">&#x7B2C;4&#x8282;</a>&#x4E2D;&#x7684;<code>&lt;notification&gt;</code>&#x5143;&#x7D20;&#x5B9A;&#x4E49;&#x3002;&#x5B83;&#x5FC5;&#x987B;&#x7B26;&#x5408;[<a href="https://tools.ietf.org/html/rfc5277" target="_blank">RFC5277</a>]&#x7684;<a href="https://tools.ietf.org/html/rfc5277#section-4" target="_blank">&#x7B2C;4&#x8282;</a>&#x4E2D;&#x7684;<code>&lt;notification&gt;</code>&#x5143;&#x7D20;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x4F7F;&#x7528;<code>XSD</code>&#x4E2D;&#x5B9A;&#x4E49;&#x7684;<code>XML</code>&#x540D;&#x79F0;&#x7A7A;&#x95F4;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code>urn:ietf:params:xml:ns:netconf:notification:1.0
+</code></pre><p>&#x5BF9;&#x4E8E;<code>JSON</code>&#x7F16;&#x7801;&#x76EE;&#x7684;&#xFF0C;&#x201C;<code>notification</code>&#x201D;&#x5143;&#x7D20;&#x7684;&#x6A21;&#x5757;&#x540D;&#x79F0;&#x662F;&#x201C;<code>ietf-restconf</code>&#x201D;&#x3002;</p>
+<p>&#x9884;&#x8BA1;&#x201C;<code>notification</code>&#x201D;&#x5BB9;&#x5668;&#x4E2D;&#x6709;&#x4E24;&#x4E2A;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x4EE3;&#x8868;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x548C;&#x4E8B;&#x4EF6;&#x6709;&#x6548;&#x8D1F;&#x8F7D;&#x3002; &#x201C;<code>eventTime</code>&#x201D;&#x8282;&#x70B9;&#x5728;&#x4E0E;<code>&lt;notification&gt;</code>&#x5143;&#x7D20;&#x76F8;&#x540C;&#x7684;<code>XML</code>&#x540D;&#x79F0;&#x7A7A;&#x95F4;&#x5185;&#x5B9A;&#x4E49;&#x3002;&#x5B83;&#x88AB;&#x5B9A;&#x4E49;&#x5728;&#x7528;&#x4E8E;<code>JSON</code>&#x7F16;&#x7801;&#x76EE;&#x7684;&#x7684;&#x201C;<code>ietf-restconf</code>&#x201D;&#x6A21;&#x5757;&#x540D;&#x79F0;&#x7A7A;&#x95F4;&#x5185;&#x3002;</p>
+<p>&#x6709;&#x6548;&#x8F7D;&#x8377;&#x5143;&#x7D20;&#x7684;&#x540D;&#x79F0;&#x548C;&#x540D;&#x79F0;&#x7A7A;&#x95F4;&#x7531;&#x5305;&#x542B;&#x8868;&#x793A;&#x901A;&#x77E5;&#x6D88;&#x606F;&#x7684;<code>notification-stmt</code>&#x7684;<code>YANG</code>&#x6A21;&#x5757;&#x786E;&#x5B9A;&#x3002;</p>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x4E86;<code>YANG</code>&#x6A21;&#x5757;&#x201C;<code>example-mod</code>&#x201D;&#xFF1A;</p>
+<pre><code class="lang-YANG">module example-mod {
+  namespace &quot;http://example.com/event/1.0&quot;;
+  prefix ex;
+
+  organization &quot;Example, Inc.&quot;;
+  contact &quot;support at example.com&quot;;
+  description &quot;Example Notification Data Model Module.&quot;;
+  revision &quot;2016-07-07&quot; {
+    description &quot;Initial version.&quot;;
+    reference &quot;example.com document 2-9976.&quot;;
+  }
+
+  notification event {
+    description &quot;Example notification event.&quot;;
+    leaf event-class {
+      type string;
+      description &quot;Event class identifier.&quot;;
+    }
+    container reporting-entity {
+      description &quot;Event specific information.&quot;;
+      leaf card {
+        type string;
+        description &quot;Line card identifier.&quot;;
+      }
+    }
+    leaf severity {
+      type string;
+      description &quot;Event severity description.&quot;;
+    }
+  }
+}
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>XML</code>&#x7F16;&#x7801;&#x7684;&#x793A;&#x4F8B;<code>SSE</code>&#x4E8B;&#x4EF6;&#x901A;&#x77E5;&#xFF1A;</p>
+<pre><code class="lang-XML">data: <span class="hljs-tag">&lt;<span class="hljs-name">notification</span>
+<span class="hljs-attr">data:</span>    <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;urn:ietf:params:xml:ns:netconf:notification:1.0&quot;</span>&gt;</span>
+data:    <span class="hljs-tag">&lt;<span class="hljs-name">eventTime</span>&gt;</span>2013-12-21T00:01:00Z<span class="hljs-tag">&lt;/<span class="hljs-name">eventTime</span>&gt;</span>
+data:    <span class="hljs-tag">&lt;<span class="hljs-name">event</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://example.com/event/1.0&quot;</span>&gt;</span>
+data:       <span class="hljs-tag">&lt;<span class="hljs-name">event-class</span>&gt;</span>fault<span class="hljs-tag">&lt;/<span class="hljs-name">event-class</span>&gt;</span>
+data:       <span class="hljs-tag">&lt;<span class="hljs-name">reporting-entity</span>&gt;</span>
+data:           <span class="hljs-tag">&lt;<span class="hljs-name">card</span>&gt;</span>Ethernet0<span class="hljs-tag">&lt;/<span class="hljs-name">card</span>&gt;</span>
+data:       <span class="hljs-tag">&lt;/<span class="hljs-name">reporting-entity</span>&gt;</span>
+data:       <span class="hljs-tag">&lt;<span class="hljs-name">severity</span>&gt;</span>major<span class="hljs-tag">&lt;/<span class="hljs-name">severity</span>&gt;</span>
+data:     <span class="hljs-tag">&lt;/<span class="hljs-name">event</span>&gt;</span>
+data: <span class="hljs-tag">&lt;/<span class="hljs-name">notification</span>&gt;</span>
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>JSON</code>&#x7F16;&#x7801;&#x7684;&#x793A;&#x4F8B;<code>SSE</code>&#x4E8B;&#x4EF6;&#x901A;&#x77E5;&#xFF1A;</p>
+<pre><code class="lang-JSON">data: {
+data:   <span class="hljs-string">&quot;ietf-restconf:notification&quot;</span> : {
+data:     <span class="hljs-string">&quot;eventTime&quot;</span> : <span class="hljs-string">&quot;2013-12-21T00:01:00Z&quot;</span>,
+data:     <span class="hljs-string">&quot;example-mod:event&quot;</span> : {
+data:       <span class="hljs-string">&quot;event-class&quot;</span> : <span class="hljs-string">&quot;fault&quot;</span>,
+data:       <span class="hljs-string">&quot;reporting-entity&quot;</span> : { <span class="hljs-string">&quot;card&quot;</span> : <span class="hljs-string">&quot;Ethernet0&quot;</span> },
+data:       <span class="hljs-string">&quot;severity&quot;</span> : <span class="hljs-string">&quot;major&quot;</span>
+data:     }
+data:   }
+data: }
+</code></pre>
+<p>&#x6216;&#x8005;&#xFF0C;&#x65E2;&#x7136;<code>XML</code>&#x548C;<code>JSON</code>&#x90FD;&#x4E0D;&#x662F;&#x5BF9;&#x7A7A;&#x683C;&#x654F;&#x611F;&#x7684;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x6D88;&#x606F;&#x53EF;&#x4EE5;&#x88AB;&#x7F16;&#x7801;&#x5230;&#x4E00;&#x884C;&#x4E2D;&#x3002; &#x4F8B;&#x5982;&#xFF1A;</p>
+<p><code>XML</code>:</p>
+<pre><code class="lang-XML">data: <span class="hljs-tag">&lt;<span class="hljs-name">notification</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;urn:ietf:params:xml:ns:netconf:notification:1.0&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">eventTime</span>&gt;</span>2013-12-21T00:01:00Z<span class="hljs-tag">&lt;/<span class="hljs-name">eventTime</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">event</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://example.com/event/1.0&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">event-class</span>&gt;</span>fault<span class="hljs-tag">&lt;/<span class="hljs-name">event-class</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">reportingEntity</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">card</span>&gt;</span>Ethernet0<span class="hljs-tag">&lt;/<span class="hljs-name">card</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">reporting-entity</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">severity</span>&gt;</span>major<span class="hljs-tag">&lt;/<span class="hljs-name">severity</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">event</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">notification</span>&gt;</span>
+</code></pre>
+<p><code>JSON</code>:</p>
+<pre><code class="lang-JSON">data: {<span class="hljs-string">&quot;ietf-restconf:notification&quot;</span>:{<span class="hljs-string">&quot;eventTime&quot;</span>:<span class="hljs-string">&quot;2013-12-21T00:01:00Z&quot;</span>,<span class="hljs-string">&quot;example-mod:event&quot;</span>:{<span class="hljs-string">&quot;event-class&quot;</span>: <span class="hljs-string">&quot;fault&quot;</span>,<span class="hljs-string">&quot;reportingEntity&quot;</span>:{<span class="hljs-string">&quot;card&quot;</span>:<span class="hljs-string">&quot;Ethernet0&quot;</span>},<span class="hljs-string">&quot;severity&quot;</span>:<span class="hljs-string">&quot;major&quot;</span>}}}
+</code></pre>
+<p><code>SSE</code>&#x89C4;&#x8303;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x9644;&#x52A0;&#x5B57;&#x6BB5;&#xFF1A;&#x201C;<code>event</code>&#x201D;&#xFF0C;&#x201C;<code>id</code>&#x201D;&#x548C;&#x201C;<code>retry</code>&#x201D;&#x3002; <code>RESTCONF</code>&#x670D;&#x52A1;&#x5668;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x201C;<code>retry</code>&#x201D;&#x5B57;&#x6BB5;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x7684;&#x8BDD;&#xFF0C;<code>RESTCONF</code>&#x5BA2;&#x6237;&#x7AEF;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x5B83;&#x3002; <code>RESTCONF</code>&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x5E94;&#x8BE5;&#x53D1;&#x9001;&#x201C;<code>event</code>&#x201D;&#x6216;&#x201C;<code>id</code>&#x201D;&#x5B57;&#x6BB5;&#xFF0C;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x53EF;&#x7528;&#x4E8E;&#x5B83;&#x4EEC;&#x7684;&#x6709;&#x610F;&#x4E49;&#x7684;&#x503C;&#xFF0C;&#x8FD9;&#x5BF9;&#x901A;&#x77E5;&#x672C;&#x8EAB;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x4F1A;&#x662F;&#x591A;&#x4F59;&#x7684;&#x3002; &#x4E0D;&#x53D1;&#x9001;&#x201C;<code>id</code>&#x201D;&#x5B57;&#x6BB5;&#x7684;<code>RESTCONF</code>&#x670D;&#x52A1;&#x5668;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x652F;&#x6301;H<code>TTP</code>&#x5934;&#x5B57;&#x6BB5;&#x201C;<code>Last-Event-ID</code>&#x201D;[<a href="http://www.w3.org/TR/2015/REC-eventsource-20150203" target="_blank">W3C.REC-eventsource-20150203</a>]&#x3002; &#x53D1;&#x9001;&#x201C;<code>id</code>&#x201D;&#x5B57;&#x6BB5;&#x7684;<code>RESTCONF</code>&#x670D;&#x52A1;&#x5668;&#x5E94;&#x8BE5;&#x652F;&#x6301;&#x201C;<code>start-time</code>&#x201D;&#x67E5;&#x8BE2;&#x53C2;&#x6570;&#xFF0C;&#x4F5C;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF;&#x6307;&#x5B9A;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x4E8B;&#x4EF6;&#x6D41;&#x7684;&#x9996;&#x9009;&#x65B9;&#x5F0F;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6.3.1.html" class="navigation navigation-prev " aria-label="Previous page: 6.3.1. 订阅接收通知">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../section-7/" class="navigation navigation-next " aria-label="Next page: 7. 错误报告">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.4. 接收事件通知","level":"1.7.4","depth":2,"next":{"title":"7. 错误报告","level":"1.8","depth":1,"path":"section-7/README.md","ref":"section-7/README.md","articles":[{"title":"7.1. 错误响应消息","level":"1.8.1","depth":2,"path":"section-7/7.1.md","ref":"section-7/7.1.md","articles":[]}]},"previous":{"title":"6.3.1. 订阅接收通知","level":"1.7.3.1","depth":3,"path":"section-6/6.3.1.md","ref":"section-6/6.3.1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors","ga","github","splitter","github-buttons"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/tonydeng/rfc7950-zh"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"repo":"tonydeng/rfc7950-zh","types":["star","watch","fork"],"size":"small"},"ga":{"configuration":"auto","token":"UA-80673215-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"YANG 1.1 数据建模语言","language":"zh","gitbook":"*","description":"YANG 1.1 数据建模语言 - RFC7950 中文翻译"},"file":{"path":"section-6/6.4.md","mtime":"2018-02-18T17:15:12.425Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-02-18T17:15:21.451Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
