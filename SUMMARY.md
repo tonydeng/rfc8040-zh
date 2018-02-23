@@ -124,5 +124,5 @@
         - [B.3.7. "start-time" 参数](appendix-b/b.3.7.md)
         - [B.3.8. "stop-time" 参数](appendix-b/b.3.8.md)
         - [B.3.9. "with-defaults" 参数](appendix-b/b.3.9.md)
-- [Acknowledgements]()
-- [Authors' Addresses]()
+- [致谢](acknowledgements.md)
+- [联系作者](authors-addresses.md)
